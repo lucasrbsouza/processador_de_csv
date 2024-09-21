@@ -3,17 +3,17 @@ package model.entities;
 import java.io.*;
 
 public class ProcessadorDeCSV {
-    private String caminhoArquivo;
+    private String caminhoDoArquivo;
 
     public ProcessadorDeCSV() {
     }
 
-    public ProcessadorDeCSV(String caminhoArquivo) {
-        this.caminhoArquivo = caminhoArquivo;
+    public ProcessadorDeCSV(String caminhoDoArquivo) {
+        this.caminhoDoArquivo = caminhoDoArquivo;
     }
 
     public void processarProdutos(String caminhoParaSerSalvo) throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader(caminhoArquivo));
+        try (BufferedReader br = new BufferedReader(new FileReader(caminhoDoArquivo));
              BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoParaSerSalvo))) {
 
             String line;
@@ -38,16 +38,16 @@ public class ProcessadorDeCSV {
         }
     }
 
-    public String getCaminhoArquivo() {
-        return caminhoArquivo;
+    public String getCaminhoDoArquivo() {
+        return caminhoDoArquivo;
     }
 
-    public void setCaminhoArquivo(String caminhoArquivo) {
-        this.caminhoArquivo = caminhoArquivo;
+    public void setCaminhoDoArquivo(String caminhoDoArquivo) {
+        this.caminhoDoArquivo = caminhoDoArquivo;
     }
 
     @Override
     public String toString() {
-        return "ProcessadorDeCSV{" + "caminhoArquivo='" + caminhoArquivo + '\'' + '}';
+        return "ProcessadorDeCSV{" + "caminhoDoArquivo='" + caminhoDoArquivo + '\'' + '}';
     }
 }
