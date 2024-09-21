@@ -2,6 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+processador_de_arquivos.iml
 
 ### Eclipse ###
 .apt_generated
